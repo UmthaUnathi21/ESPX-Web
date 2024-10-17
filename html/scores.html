@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scores - English Premier League</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/eplcalendar.js" defer></script>
+    <script src="../js/all.js" defer></script>
+</head>
+<body>
+    <header class="espx-header">
+        <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo">
+        <ul class="nav-menu">
+                    <!-- Navigation links to different pages -->
+                    <li><a href="../index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="../html/efl.html" class="nav-link" data-page="epl">EPL</a></li>
+                    <li><a href="../html/scores.html" class="nav-link" data-page="scores">Scores</a></li>
+                    <li><a href="../html/predictor.html" class="nav-link" data-page="predictor">Predictor</a></li>
+                    <li><a href="../html/eplteams.html" class="nav-link" data-page="teams">Teams</a></li>
+                    <li><a href="../html/transfer.html" class="nav-link" data-page="transfers">Transfers</a></li>
+                    <li><a href="../html/about.html" class="nav-link" data-page="about">About</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section>
+            <h2>English Premier League Scores</h2>
+            
+            <!-- Calendar View Controls -->
+            <div class="calendar-controls">
+                <button id="prevWeek" class="nav-arrow">&#8592; Previous</button>
+                <button id="calendarIcon" class="calendar-icon">&#128197;</button>
+                <button id="nextWeek" class="nav-arrow">Next &#8594;</button>
+            </div>
+            
+            <!-- Container to display dates -->
+            <div id="calendar-container"></div>
+            <div id="match-list-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>

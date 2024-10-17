@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPX Basketball Scores</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/bballscores.js" defer></script>
+</head>
+<body>
+    <header class="espx-header">
+        <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo">
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="../html/bballscores.html" class="nav-link" data-page="scores">Scores</a></li>
+            <li><a href="../html/bballnews.html" class="nav-link" data-page="basketball">News</a></li>
+            <li><a href="../html/bballteams.html" class="nav-link" data-page="teams">Teams</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section>
+            <div class="header-container">
+                <!-- Logos for different leagues -->
+                <img src="../logos/nba-logo.png" alt="NBA Logo" class="league-logo" id="nba-logo">
+                <img src="../logos/wnba-logo.png" alt="WNBA Logo" class="league-logo" id="wnba-logo">
+                <img src="../logos/ncaamw-logo.png" alt="NCAA Men's Logo" class="league-logo" id="ncaamw-logo">
+                <img src="../logos/ncaaw-logo.png" alt="NCAA Women's Logo" class="league-logo" id="ncaaw-logo">
+            </div>
+
+            <!-- NBA Scores Container -->
+            <div id="nba-scores-container" class="scores-container">
+                <h2>NBA Scores</h2>
+                <div id="nba-scores"></div>
+            </div>
+
+            <!-- WNBA Scores Container -->
+            <div id="wnba-scores-container" class="scores-container">
+                <h2>WNBA Scores</h2>
+                <div id="wnba-scores"></div>
+            </div>
+
+            <!-- NCAA Men's Scores Container -->
+            <div id="ncaamw-scores-container" class="scores-container">
+                <h2>NCAA Men's Scores</h2>
+                <div id="ncaamw-scores"></div>
+            </div>
+
+            <!-- NCAA Women's Scores Container -->
+            <div id="ncaaw-scores-container" class="scores-container">
+                <h2>NCAA Women's Scores</h2>
+                <div id="ncaaw-scores"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>

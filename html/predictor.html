@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage displayed in the browser tab -->
+    <title>EPL Table Predictor</title>
+    
+    <!-- Description for SEO, summarizing the webpage's purpose -->
+    <meta name="description" content="Predict the outcomes of the English Premier League 2023-24 season with our interactive EPL table predictor. Analyze team performance and statistics.">
+    
+    <!-- Keywords for SEO, relevant to the webpage's content -->
+    <meta name="keywords" content="EPL Predictor, English Premier League, sports analytics, team statistics, data visualization">
+    
+    <!-- Author of the webpage -->
+    <meta name="author" content="Umtha-Unathi Mavuso">
+    
+    <!-- Link to the main stylesheet for styling the webpage -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- D3.js library for data visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Link to the script for the predictor functionality, loaded after HTML parsing -->
+    <script src="../js/predictor.js" defer></script>
+    <script src="../js/all.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="espx-header">
+            <!-- Logo of the ESPN Clone Website -->
+            <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo">
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Navigation links to different pages -->
+                    <li><a href="../index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="../html/efl.html" class="nav-link" data-page="epl">EPL</a></li>
+                    <li><a href="../html/scores.html" class="nav-link" data-page="scores">Scores</a></li>
+                    <li><a href="../html/predictor.html" class="nav-link" data-page="predictor">Predictor</a></li>
+                    <li><a href="../html/eplteams.html" class="nav-link" data-page="teams">Teams</a></li>
+                    <li><a href="../html/transfer.html" class="nav-link" data-page="transfers">Transfers</a></li>
+                    <li><a href="../html/about.html" class="nav-link" data-page="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="predictor-section">
+            <a href="scores.html">
+                <img src="../logos/EPL_logo.png" alt="EPL Logo" class="epl-logo">
+            </a>
+            <!-- Main heading for the predictor section -->
+            <h1>EPL 2023-24 Predictor</h1>
+            <div class="table-container">
+                <!-- Table to display EPL teams and their statistics -->
+                <table id="epl-table">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Team</th>
+                            <th>Goals Scored</th>
+                            <th>Wins</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data from API will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer with copyright information -->
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>

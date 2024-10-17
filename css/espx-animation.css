@@ -1,0 +1,99 @@
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Set background color */
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Needed for the ::before pseudo-element */
+}
+
+/* Background collage using ::before */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../gifs/nba-bckg1.gif'), 
+                      url('../gifs/ncaamw-bckg1.gif'), 
+                      url('../gifs/wnba-bckg1.gif'), 
+                      url('../gifs/epl-goal.gif'), 
+                      url('../gifs/ncaamw-bckg2.gif'); /* Add as many images as needed */
+    background-position: top left, top right, bottom left, bottom right, center;
+    background-size: 25% 25%, 25% 25%, 25% 25%, 25% 25%, cover;
+    background-repeat: no-repeat;
+    opacity: 0.15; /* Adjust opacity to ensure it's not too distracting */
+    z-index: 1; /* Behind the content */
+}
+
+/* Central ESPX logo */
+.logo-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 10; /* Ensure it's above the background */
+}
+
+.espx-logo-center {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    z-index: 10; /* On top of other logos */
+}
+
+/* Floating logos */
+.floating-logo {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    animation: rotate linear infinite; /* Infinite rotation */
+    z-index: 10;
+}
+
+/* EPL logo */
+.epl-logo {
+    top: -150px; /* Adjust to place above the center */
+    left: 50%; 
+    width: 100px;
+    transform: translateX(-50%);
+    animation-duration: 8s; /* Faster rotation */
+}
+
+/* NBA logo */
+.nba-logo {
+    right: -150px; /* Adjust to place to the right of the center */
+    top: 50%;
+    transform: translateY(-50%);
+    animation-duration: 10s; /* Medium rotation */
+}
+
+/* WNBA logo */
+.wnba-logo {
+    bottom: -150px; /* Adjust to place below the center */
+    left: 50%;
+    width: 80px;
+    transform: translateX(-50%);
+    animation-duration: 12s; /* Slower rotation */
+}
+
+/* NCAA logo */
+.ncaamw-logo {
+    left: -150px; /* Adjust to place to the left of the center */
+    top: 50%;
+    transform: translateY(-50%);
+    animation-duration: 14s; /* Slowest rotation */
+}
+
+/* Keyframes for rotating animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}

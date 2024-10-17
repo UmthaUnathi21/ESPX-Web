@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPX Basketball Teams</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../js/bballteams.js" defer></script>
+</head>
+<body>
+    <header class="espx-header">
+        <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo">
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="../html/bballscores.html" class="nav-link" data-page="scores">Scores</a></li>
+            <li><a href="../html/bballnews.html" class="nav-link" data-page="basketball">News <i class="fas fa-basketball-ball"></i></a></li> <!-- Added basketball icon -->
+            <li><a href="../html/bballteams.html" class="nav-link" data-page="teams">Teams</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section>
+            <div class="header-container">
+                <!-- Logos for different leagues -->
+                <img src="../logos/nba-logo.png" alt="NBA Logo" class="league-logo" id="nba-logo">
+                <img src="../logos/wnba-logo.png" alt="WNBA Logo" class="league-logo" id="wnba-logo">
+                <img src="../logos/ncaamw-logo.png" alt="NCAA Men's Logo" class="league-logo" id="ncaamw-logo">
+                <img src="../logos/ncaaw-logo.png" alt="NCAA Women's Logo" class="league-logo" id="ncaaw-logo">
+            </div>
+
+            <!-- NBA Teams Container -->
+            <div id="nba-container" class="team-container">
+                <h2>NBA Teams</h2>
+                <input type="text" id="nba-search" placeholder="Search NBA teams..." />
+                <div id="nba-teams"></div>
+            </div>
+
+            <!-- WNBA Teams Container -->
+            <div id="wnba-container" class="team-container">
+                <h2>WNBA Teams</h2>
+                <input type="text" id="wnba-search" placeholder="Search WNBA teams..." />
+                <div id="wnba-teams"></div>
+            </div>
+
+            <!-- NCAA Men's Teams Container -->
+            <div id="ncaamw-container" class="team-container">
+                <h2>NCAA Men's Teams</h2>
+                <input type="text" id="ncaamw-search" placeholder="Search NCAA Men's teams..." />
+                <div id="ncaamw-teams"></div>
+            </div>
+
+            <!-- NCAA Women's Teams Container -->
+            <div id="ncaaw-container" class="team-container">
+                <h2>NCAA Women's Teams</h2>
+                <input type="text" id="ncaaw-search" placeholder="Search NCAA Women's teams..." />
+                <div id="ncaaw-teams"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>

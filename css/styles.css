@@ -1,0 +1,883 @@
+/* General reset */
+/* Resets default browser styles for consistent margin, padding, and box-sizing across all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+/* Defines the base font, background color, and text color for the entire website */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark gray text color for better readability */
+    justify-content: center;
+}
+
+main {
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 20px; /* Space for the fixed header */
+    overflow: auto; /* Allow scrolling */
+}
+
+/* ESPX Header */
+/* Styling the header of the website, mimicking ESPN's design with a red background and white text */
+.espx-header {
+    background-color: #CC0000; /* ESPN signature red */
+    color: white; /* White text for contrast */
+    display: flex; /* Flexbox layout for header content */
+    align-items: center; /* Vertically center items within the header */
+    justify-content: center; /* Center the entire header content */
+    padding: 10px 20px;
+    position: relative;
+}
+
+.espn-logo {
+    height: auto;
+    width: 200px;
+}
+
+/* Logo inside the header */
+.espx-logo {
+    height: auto; /* Adjust the height as needed */
+    width: 150px;
+    position: absolute; /* Position absolute to keep the logo on the left */
+    left: 0px; /* Align logo to the left */
+}
+
+/* Navigation menu */
+/* Styling the list of navigation items inside the header */
+.nav-menu {
+    list-style-type: none; /* Removes default list styling (no bullets) */
+    display: flex; /* Horizontal layout for nav items */
+    gap: 15px; /* Space between each navigation item */
+    justify-content: center; /* Centers the nav items horizontally */
+    margin: 0 auto; /* Ensure the nav menu itself is centered */
+}
+
+/* Styling the links inside the navigation menu */
+.nav-menu li a {
+    color: white; /* White text for nav links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 14px; /* Slightly smaller text for a clean look */
+}
+
+/* Hover effect for navigation links */
+.nav-menu li a:hover {
+    border-bottom: 2px solid white; /* Adds a bottom border when hovered */
+    padding-bottom: 2px; /* Ensures the text doesn't shift when the border appears */
+}
+
+
+/* Main Content */
+/* Styling for the title of charts/visuals in the main content */
+.chart-title {
+    text-align: center; /* Center-aligns the chart title */
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #333; /* Dark gray color for readability */
+    margin: 20px 0; /* Adds space above and below the title */
+}
+
+/* SVG Styling */
+/* Centers the SVG graphics (such as charts) and adds a background and border */
+svg {
+    display: block; /* Ensures SVG takes up available space */
+    margin: 0 auto; /* Centers the SVG horizontally */
+    background-color: #e6e6e6; /* Light gray background inside the chart */
+    border: 2px solid #ddd; /* Light border around the chart */
+}
+
+/* Tooltip */
+/* Styles the tooltip that appears when hovering over chart elements */
+.tooltip {
+    position: absolute; /* Allows precise positioning of the tooltip */
+    text-align: center; /* Center the text inside the tooltip */
+    width: 120px; /* Fixed width for the tooltip */
+    height: auto; /* Automatically adjust height based on content */
+    padding: 8px; /* Adds padding inside the tooltip */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* White text for contrast */
+    border-radius: 4px; /* Rounded corners for the tooltip */
+    font-size: 12px; /* Smaller font size */
+    pointer-events: none; /* Ensures the tooltip doesn't interfere with mouse events */
+    visibility: hidden; /* Hidden by default */
+    z-index: 10; /* Ensures the tooltip appears above other elements */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Footer */
+/* Styling the footer at the bottom of the page */
+/* Footer */
+footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    position: relative; /* Change to relative */
+    width: 100%; 
+}
+
+/* Footer text styling */
+footer p {
+    margin: 0; /* Removes default margin */
+    font-size: 12px; /* Smaller font size for a clean look */
+}
+
+/* League Section Styling */
+/* Background colors to differentiate league sections (Champions, Europa, and relegation) */
+.champions-league {
+    background-color: #d4edda; /* Light green for Champions League */
+}
+
+.europa-league {
+    background-color: #cce5ff; /* Light blue for Europa League */
+}
+
+.relegated {
+    background-color: #f8d7da; /* Light red for Relegated Teams */
+}
+
+/* Table Row Hover */
+/* Adds a background color when hovering over table rows */
+tr:hover {
+    background-color: #ddd; /* Light gray for hover effect */
+}
+
+/* Table Styling */
+/* General table layout with border and padding */
+table {
+    width: 100%; /* Table takes full width of the container */
+    border-collapse: collapse; /* Removes gaps between cells */
+    margin: 20px 0; /* Adds vertical spacing around the table */
+}
+
+th, td {
+    padding: 10px; /* Adds padding inside table cells */
+    text-align: center; /* Center-aligns text in both header and body */
+    border: 1px solid #ddd; /* Light border for cells */
+}
+
+/* Header Row Styling */
+th {
+    background-color: #CC0000; /* ESPN red for header background */
+    color: white; /* White text for contrast */
+}
+
+/* Zebra Striping for Table Rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternating rows */
+}
+
+/* Section Highlighting */
+/* Different sections in charts/graphs for elite, middle, and poor performers */
+.elite-section {
+    fill: rgba(0, 255, 0, 0.1); /* Light green fill for elite section */
+    stroke: green; /* Green border */
+    stroke-width: 2px; /* Border width */
+}
+
+.middle-section {
+    fill: rgba(0, 0, 255, 0.1); /* Light blue fill for middle section */
+    stroke: blue; /* Blue border */
+    stroke-width: 2px;
+}
+
+.poor-section {
+    fill: rgba(255, 0, 0, 0.1); /* Light red fill for poor section */
+    stroke: red; /* Red border */
+    stroke-width: 2px;
+}
+
+/* Tooltip on Table Row Hover */
+/* Adds a tooltip when hovering over specific rows */
+tr[title]:hover::after {
+    content: attr(title); /* Uses the 'title' attribute for tooltip content */
+    position: absolute; /* Positions tooltip absolutely */
+    left: 50%; /* Centers the tooltip horizontally */
+    transform: translateX(-50%); /* Ensures tooltip aligns to the row */
+    padding: 8px; /* Adds padding inside the tooltip */
+    background: rgba(0, 0, 0, 0.8); /* Dark background for tooltip */
+    color: #fff; /* White text for contrast */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 12px; /* Small font size */
+    pointer-events: none; /* Prevents interference with mouse events */
+    white-space: nowrap; /* Prevents the tooltip from wrapping */
+    z-index: 10; /* Ensures tooltip appears above other elements */
+}
+
+/* Responsive Design - Mobile View */
+/* Adjusts layout for screens smaller than 768px */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Stacks nav items vertically */
+        gap: 10px; /* Reduces space between items */
+    }
+
+    .espx-logo {
+        height: 30px; /* Smaller logo for mobile screens */
+    }
+
+    footer {
+        font-size: 12px; /* Reduces footer text size for mobile */
+    }
+
+    svg {
+        width: 100%; /* Ensures SVG (charts) are responsive */
+        height: auto; /* Adjusts height automatically */
+    }
+}
+
+/* Center all headers */
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Scale all images to the same size and center them */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 500px;  /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensure images fill the box while maintaining aspect ratio */
+}
+
+/* Highlights Section */
+.highlights-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Carousel Item Styling */
+.carousel {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    transition: filter 0.3s ease; /* Smooth transition for darkening effect */
+}
+
+/* Darkening effect on hover */
+.carousel-item:hover img {
+    filter: brightness(50%); /* Darkens the image */
+}
+
+/* Score overlay styling */
+.score-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Show score on hover */
+.carousel-item:hover .score-overlay {
+    opacity: 1; /* Make the score visible on hover */
+}
+
+/* Scores Ticker Section */
+.scores-ticker {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.ticker {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 15s linear infinite;
+}
+
+.breaking-news-section {
+    background-color: #f8f8f8; /* Light background for contrast */
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Centers the breaking news content */
+}
+
+.breaking-news-section h2 {
+    text-transform: uppercase; /* Capitalizes the text */
+    color: red; /* Sets the text color to red */
+    text-align: center; /* Centers the header */
+}
+
+.breaking-news {
+    margin-top: 10px; /* Space between the header and content */
+}
+
+.design-section {
+    clear: both; /* Prevent float issues */
+    margin: 20px 0; /* Space between sections */
+    padding: 20px; /* Padding inside the section */
+    background-color: #fff; /* Optional: White background for contrast */
+    border: 1px solid #ddd; /* Optional: Light border */
+}
+
+/* Responsive image */
+.design-mockup {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.chart-description {
+    clear: both; /* Prevent float issues */
+    margin: 20px 0; /* Space between sections */
+    padding: 20px; /* Padding inside the section */
+    background-color: #fff; /* Optional: White background for contrast */
+    border: 1px solid #ddd; /* Optional: Light border */
+}
+
+/* Responsive image */
+.chart-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo-design-section {
+    clear: both; /* Prevent float issues */
+    margin: 20px 0; /* Space between sections */
+    padding: 20px; /* Padding inside the section */
+    background-color: #fff; /* Optional: White background for contrast */
+    border: 1px solid #ddd; /* Optional: Light border */
+}
+
+/* Responsive image */
+.logo-mockup {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-page-description, .scatterplot-explanation, .data-storytelling, .epl-table-design, .interactivity-engagement, .design-principles, .visualization-techniques, .strengths-and-weaknesses-description, .emotional-impact {
+    clear: both; /* Prevent float issues */
+    margin: 20px 0; /* Space between sections */
+    padding: 20px; /* Padding inside the section */
+    background-color: #fff; /* Optional: White background for contrast */
+    border: 1px solid #ddd; /* Optional: Light border */
+}
+
+.legend {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.legend h3 {
+    margin-bottom: 10px;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.legend li {
+    margin-bottom: 5px;
+}
+
+
+/* Animation for the scrolling text */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Calendar container */
+#calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.calendar-day {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-day:hover {
+    background-color: #ccc;
+}
+
+.match-item {
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.nav-arrow {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.calendar-icon {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Additional styles for displaying the full month view */
+.calendar-date {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+/* Styling for the transfer news */
+.news-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.news-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.news-item a {
+    color: #9e1021;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.news-item {
+    text-align: center; /* Center text and inline elements */
+    margin-bottom: 20px; /* Spacing between news items */
+}
+
+.news-image {
+    max-width: 100%; /* Responsive */
+    height: auto;
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image */
+}
+
+.news-video {
+    max-width: 100%; /* Responsive */
+    margin: 0 auto; /* Centers the video */
+    display: block; /* Ensures the video is treated as a block element */
+}
+
+.news-banner {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    padding: 5px; /* Some padding */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Bold text */
+    position: absolute; /* Position it over the image */
+    top: 10px; /* Adjust top position */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Correct centering */
+    z-index: 1; /* Ensure it appears above the image */
+}
+
+.news-item {
+    position: relative; /* Required for absolute positioning of the banner */
+}
+
+
+.read-more-button {
+    display: inline-block; /* Make it behave like a button */
+    padding: 10px 20px; /* Add some padding */
+    margin-top: 10px; /* Add space above the button */
+    background-color: #e9eaea; /* Bootstrap primary color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.read-more-button:hover {
+    background-color: #d8d9da; /* Darker shade on hover */
+}
+
+/* Flexbox style for aligning the logo and text horizontally */
+.transfer-news-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Horizontally center both logo and text */
+    width: 100%;  /* Ensure the container takes full width */
+    margin-top: 20px;  /* Optional: add some margin at the top */
+    margin-bottom: 20px;
+    display: block; /* Ensures the h2 header is treated as a block element */
+}
+
+.transfer-news-header a:hover {
+    opacity: 0.8; /* Optional: Adds a hover effect */
+}
+
+.epl-logo {
+    width: 100px;  /* Adjust size as needed */
+    height: auto;
+    display: block; /* Make the logo a block element to center it */
+}
+
+.epl-logo-1 {
+    width: 100px;  /* Adjust size as needed */
+    height: auto;
+    display: block; /* Make the logo a block element to center it */
+}
+
+.nba-logo, .ncaa-logo, .wnba-logo {
+    width: 100px;  /* Adjust size as needed */
+    height: auto;
+    display: block; /* Make the logo a block element to center it */
+}
+
+#teams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; /* Adjust width as needed */
+    text-align: center; /* Center text */
+}
+
+#search-bar {
+    margin: 0 auto 20px; /* Center search bar and add bottom margin */
+    padding: 10px;
+    width: 50%; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; /* Make the search bar a block element to center it */
+}
+
+.team-logo {
+    width: 150px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Space around logos */
+    display: block; /* Ensure the image is treated as a block element */
+    margin-left: auto; /* Centering adjustments */
+    margin-right: auto; /* Centering adjustments */
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Axis text */
+.axis text {
+    font: 12px sans-serif;
+}
+
+/* Axis line and ticks */
+.axis path,
+.axis line {
+    fill: none;
+    shape-rendering: crispEdges;
+    stroke: black;
+    stroke-width: 1px;
+}
+.article {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+h2 {
+    margin: 0 0 8px 0;
+}
+
+p {
+    margin: 8px 0;
+}
+
+.news-header {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center the logos horizontally */
+    align-items: center; /* Center the logos vertically if they have different heights */
+    margin-bottom: 20px; /* Space below the logos */
+}
+
+.news-header a {
+    margin: 0 10px; /* Space between logos */
+}
+
+#news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center content inside the news item */
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-header img {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; /* Default: No underline */
+    transition: border-bottom 0.3s ease;
+}
+
+/* Add red underline to the active logo */
+.active-logo {
+    border-bottom: 2px solid red;
+}
+
+
+/* Hover effect to turn the background grey */
+.news-item:hover {
+    background-color: #d5d4d4; /* Light grey color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Default link style */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+    transition: border-bottom 0.3s ease;
+}
+
+/* White underline for active page */
+.nav-menu a.active-page {
+    border-bottom: 2px solid white;
+}
+/* Style for the header logos to be displayed horizontally */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.league-logo {
+    width: 100px;
+    height: auto;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.league-logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Hide team containers initially */
+.hidden {
+    display: none;
+}
+
+.team-container {
+    margin-top: 20px;
+}
+
+/* Team search bar styling */
+input[type="text"] {
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Teams container layout */
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Center the teams displayed */
+#nba-teams, #wnba-teams, #ncaamw-teams, #ncaaw-teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center the teams horizontally */
+    gap: 15px;  /* Add some space between team items */
+}
+
+/* Team logos */
+.team-logo {
+    width: 125px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.fa-basketball-ball {
+    margin-left: 2.5px; /* Adds a little space between the word 'News' and the icon */
+    font-size: 10px; /* Adjust the size of the icon */
+    vertical-align: middle; /* Aligns the icon with the text */
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Center the scores container itself */
+.scores-container {
+    display: block;
+    width: 100%; /* Make the container full width */
+    text-align: center; /* Center the text inside */
+    justify-content: center;
+    
+}
+
+/* Center the content inside the scores-content */
+.scores-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Add spacing between game containers */
+    max-width: 1200px; /* Set a max width to prevent it from stretching too far */
+    margin: 0 auto; /* Center it horizontally */
+}
+
+/* Style the game container */
+.game-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+/* Align the team names and scores */
+.team-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Center the nav menu links */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure main sections are centered */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

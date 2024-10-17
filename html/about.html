@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <meta name="description" content="Learn about the inspiration and development behind the ESPN Clone project, combining a passion for sports with web development and data visualization.">
+    <meta name="keywords" content="about, ESPN Clone, sports passion, web development, data visualization">
+    <meta name="author" content="Umtha-Unathi Mavuso">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/all.js" defer></script>
+</head>    
+<body>
+    <header>
+        <div class="espx-header">
+            <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo">
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Navigation links to different pages -->
+                    <li><a href="../index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="../html/efl.html" class="nav-link" data-page="epl">EPL</a></li>
+                    <li><a href="../html/bballnews.html" class="nav-link" data-page="basketball">Basketball</a></li>
+                    <li><a href="../html/design.html" class="nav-link" data-page="design">Design</a></li>
+                    <li><a href="../html/predictor.html" class="nav-link" data-page="predictor">Predictor</a></li>
+                    <li><a href="../html/about.html" class="nav-link" data-page="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <a href="../index.html">
+            <img src="../logos/espx-logo(2).png" alt="ESPX Logo" class="espn-logo">
+        </a>
+        <h2>About This Project</h2>
+        <section class="about-page-description">
+            <p>This website was inspired by my passion for sports and the desire to represent sports data visually. As a die-hard athlete, I have played sports such as basketball, football, rugby, cricket, and tennis all my life. My earliest introduction to sports was through football, particularly as a Liverpool fanatic in the Premier League. This passion has fueled my desire to learn more and stay close to the action.</p>
+
+            <p>The ESPX website aims to enhance the spectator's experience by providing real-time insights into sports events, team performances, and player statistics. By presenting this data in an engaging and visually appealing manner, the site not only informs viewers but also sparks discussions and debates among sports enthusiasts. The goal is to transform how fans engage with their favorite teams and players, deepening their appreciation and understanding of the game.</p>
+
+            <p>As a game designer and web designer, my inspiration primarily comes from established platforms like ESPN, which provide key insights that enhance the love and passion for sports. By leveraging my skills in web development, I aimed to create a similar experience that empowers users to explore data and analytics that highlight the dynamic nature of sports. Ultimately, this website reflects my commitment to bringing sports closer to fans and enhancing their viewing experience.</p>
+
+            <p>Data visualizations, such as the ones featured on this website, allow fans to analyze and interpret statistics, providing a deeper understanding of the game. They serve as a bridge between the spectator and the sport, creating a more immersive experience and fulfilling my long-standing desire to be as close to the action as possible.</p>
+        </section>
+
+        <section class="scatterplot-explanation">
+            <h3>Data Visualizations</h3>
+            <h4>EPL Scatterplot Graph</h4>
+            <p>The <strong>EPL Scatterplot Graph</strong> provides a visual representation of the performance of English Premier League (EPL) teams during the <strong>2022-23 season</strong>. Utilizing data fetched from the <strong>ESPN eng1 API</strong>, this scatterplot plots teams based on two critical performance metrics: the <strong>number of goals scored</strong> and the <strong>number of wins</strong> achieved throughout the season.</p>
+            <ul>
+                <li><strong>Data Points</strong>: Each point on the scatterplot represents an individual EPL team, allowing for easy comparison across different clubs.</li>
+                <li><strong>Highlighting System</strong>: 
+                    <ul>
+                        <li><strong>Elite Teams</strong>: Teams that scored a high number of goals and achieved many wins are categorized as "elite," highlighted in <span style="color: green;">green</span>.</li>
+                        <li><strong>Middle Teams</strong>: Teams that performed adequately but did not excel are classified as "middle," highlighted in <span style="color: blue;">blue</span>.</li>
+                        <li><strong>Poor Teams</strong>: Teams that struggled throughout the season are marked as "poor" and highlighted in <span style="color: red;">red</span>.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>This scatterplot not only presents a clear picture of team performance but also facilitates an engaging analysis of the league's competitiveness during the season.</p>
+
+            <h4>Table Finish Predictor</h4>
+            <p>The <strong>Table Finish Predictor</strong> is an analytical tool that leverages data from the <strong>ESPN eng1 API</strong> to forecast the outcomes for EPL teams in the upcoming season based on their performance in the <strong>2022-23 season</strong>.</p>
+            <ul>
+                <li><strong>Predicted Metrics</strong>: 
+                    <ul>
+                        <li><strong>Goals Scored</strong>: Estimates the total goals each team is likely to score.</li>
+                        <li><strong>Wins</strong>: Predicts the expected number of wins for each team.</li>
+                        <li><strong>Points</strong>: Calculates the potential points accumulation based on wins and draws.</li>
+                        <li><strong>Goal Difference</strong>: Assesses the expected goal difference for each team.</li>
+                    </ul>
+                </li>
+                <li><strong>Highlighting System</strong>: 
+                    <ul>
+                        <li><strong>Top 4 Teams</strong>: Highlighted in <span style="color: green;">green</span>, indicating qualification for the <strong>Champions League</strong>.</li>
+                        <li><strong>5th and 6th Place Teams</strong>: Highlighted in <span style="color: blue;">blue</span>, signifying qualification for the <strong>Europa League</strong>.</li>
+                        <li><strong>Bottom 3 Teams</strong>: Highlighted in <span style="color: red;">red</span>, representing their drop to the <strong>EFL Championship</strong>.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>This predictor allows fans and analysts to anticipate the future standings and stimulates discussions about team strategies and potential player movements in preparation for the next season.</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer with copyright information -->
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>

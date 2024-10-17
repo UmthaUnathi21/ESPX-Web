@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage displayed in the browser tab -->
+    <title>ESPX Website</title>
+    
+    <!-- Description for SEO, summarizing the website's purpose -->
+    <meta name="description" content="Welcome to the ESPX Website, showcasing sports statistics and visualizations focused on the English Premier League. Explore data, visualizations, and the design process of our site.">
+    
+    <!-- Keywords for SEO, relevant to the website's content -->
+    <meta name="keywords" content="ESPX - sports statistics, visualizations, English Premier League, data analysis, web development">
+    
+    <!-- Author of the webpage -->
+    <meta name="author" content="Umtha-Unathi Mavuso">
+    
+    <!-- Link to the main stylesheet for styling the website -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- D3.js library for data visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Link to the main script, loaded after the HTML is parsed -->
+    <script src="js/script.js" defer></script>
+    <script src="js/all.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="espx-header">
+            <!-- Logo of the ESPN Clone Website -->
+            <img src="logos/espx-logo(2).png" alt="ESPX Logo" class="espx-logo">
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Navigation links to different pages -->
+                    <li><a href="./index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="./html/espx-animation.html" class="nav-link" data-page="espx">ESPX</a></li>
+                    <li><a href="html/efl.html" class="nav-link" data-page="epl">EPL</a></li>
+                    <li><a href="html/bballnews.html" class="nav-link" data-page="basketball">Basketball</a></li>
+                    <li><a href="html/design.html" class="nav-link" data-page="design">Design</a></li>
+                    <li><a href="html/predictor.html" class="nav-link" data-page="predictor">Predictor</a></li>
+                    <li><a href="html/about.html" class="nav-link" data-page="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <a href="index.html">
+                <img src="/logos/espx-logo(2).png" alt="ESPX Logo" class="espn-logo">
+            </a>
+            <!-- Main heading and introductory paragraph -->
+            <h1>Welcome to the ESPX Website</h1>
+            <p>This site is dedicated to showcasing sports statistics and visualizations. You can explore data on the English Premier League, view the design process of this site, and learn more about our passion for sports representation.</p>
+        </section>
+    </main>
+    
+        <!-- Highlights Reel Section -->
+<section class="highlights-section">
+    <h2>EPL Goal Highlights</h2>
+    <div class="carousel">
+        <div class="carousel-item" data-score="Man City 2-0 Arsenal">
+            <img src="./images/goal-news1.png" alt="Goal Highlight 1">
+            <div class="score-overlay">Brighton 3-2 Wolves FT</div>
+        </div>
+        <div class="carousel-item" data-score="Liverpool 1-1 Chelsea">
+            <img src="./images/goal-news2.png" alt="Goal Highlight 2">
+            <div class="score-overlay">West Ham 3-1 Arsenal FT</div>
+        </div>
+        <div class="carousel-item" data-score="Tottenham 3-2 Man United">
+            <img src="./images/goal-news3.png" alt="Goal Highlight 3">
+            <div class="score-overlay">Brentford 1-3 Tottenham FT</div>
+        </div>
+    </div>
+</section>
+
+<!-- Breaking News Section -->
+<section class="breaking-news-section">
+    <h2>Breaking News</h2>
+    <div id="breaking-news">
+        <!-- Breaking news will be populated here -->
+        Loading breaking news...
+    </div>
+</section>
+
+        <!-- EPL Game Scores Ticker -->
+<section class="scores-ticker">
+    <h2>2022-23 EPL Match Scores</h2>
+    <div class="ticker">
+        <p id="ticker-text"></p>
+    </div>
+</section>
+    </main>
+    
+
+    <footer>
+        <!-- Footer with copyright information -->
+        <p>&copy; 2024 ESPX. All rights reserved. Authored by Umtha-Unathi Mavuso</p>
+    </footer>
+</body>
+</html>
